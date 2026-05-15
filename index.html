@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lançamento RD Free 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .tab-active { border-bottom: 3px solid #3b82f6; color: #3b82f6; font-weight: 700; }
+        .card-transition { transition: all 0.3s ease; }
+        .filter-active { background-color: #3b82f6 !important; color: white !important; }
+        .timeline-line { position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: #e2e8f0; z-index: 0; }
+    </style>
+</head>
+<body class="min-h-screen pb-20">
+
+    <!-- Header / Nav -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-bold text-slate-800">Lançamento <span class="text-blue-600">RD Free</span></h1>
+                <p class="text-xs text-slate-500 uppercase tracking-widest font-semibold">2026 • RD Station • DG Growth</p>
+            </div>
+            
+            <nav class="flex gap-8">
+                <button onclick="switchTab('estrategia')" id="tab-estrategia" class="pb-2 px-1 text-sm font-medium transition-all tab-active">ESTRATÉGIA</button>
+                <button onclick="switchTab('cronograma')" id="tab-cronograma" class="pb-2 px-1 text-sm font-medium transition-all text-slate-500 hover:text-blue-500">CRONOGRAMA & GTM</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 mt-10">
+
+        <!-- ABA 1: ESTRATÉGIA -->
+        <section id="content-estrategia" class="space-y-12">
+            <!-- Hero Section -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                <p class="text-lg text-slate-600 leading-relaxed max-w-4xl">
+                    Em 2026, o foco é transformar os produtos de entrada da RD Station em motores de <span class="font-semibold text-blue-600">aquisição, ativação e monetização</span>, reduzindo fricções e acelerando a geração de valor desde os primeiros momentos.
+                </p>
+            </div>
+
+            <!-- Pilares Estratégicos -->
+            <div>
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    PILARES ESTRATÉGICOS
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Inteligência -->
+                    <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 hover:shadow-md transition-shadow">
+                        <div class="bg-blue-500 text-white w-10 h-10 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-blue-900 mb-2">Inteligência</h3>
+                        <p class="text-sm text-blue-700">Dados para identificar gargalos, priorizar testes e orientar decisões de crescimento.</p>
+                    </div>
+                    <!-- Aquisição -->
+                    <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-100 hover:shadow-md transition-shadow">
+                        <div class="bg-emerald-500 text-white w-10 h-10 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-emerald-900 mb-2">Aquisição</h3>
+                        <p class="text-sm text-emerald-700">Geração de signups e expansão da base EL com diversificação de canais.</p>
+                    </div>
+                    <!-- Engajamento -->
+                    <div class="bg-amber-50 p-6 rounded-xl border border-amber-100 hover:shadow-md transition-shadow">
+                        <div class="bg-amber-500 text-white w-10 h-10 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-amber-900 mb-2">Engajamento</h3>
+                        <p class="text-sm text-amber-700">Ativação e estímulo ao uso para acelerar time to value e aumentar retenção.</p>
+                    </div>
+                    <!-- Rentabilização -->
+                    <div class="bg-rose-50 p-6 rounded-xl border border-rose-100 hover:shadow-md transition-shadow">
+                        <div class="bg-rose-500 text-white w-10 h-10 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-rose-900 mb-2">Rentabilização</h3>
+                        <p class="text-sm text-rose-700">Conversão de usuários Free em pagantes com foco em valor percebido.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Principais Métricas -->
+            <div>
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    PRINCIPAIS MÉTRICAS
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200">
+                        <h3 class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-wider">Aquisição</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2 text-slate-700"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span> CVR visita → signup</li>
+                            <li class="flex items-center gap-2 text-slate-700"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span> Aumento % de signups</li>
+                            <li class="flex items-center gap-2 text-slate-700"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span> % de canais não pagos</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200">
+                        <h3 class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-wider">Engajamento</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2 text-slate-700"><span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span> % ativação inicial</li>
+                            <li class="flex items-center gap-2 text-slate-700"><span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span> % finalização de onboarding</li>
+                            <li class="flex items-center gap-2 text-slate-700"><span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span> Uso de funcionalidades</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200">
+                        <h3 class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-wider">Rentabilização</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2 text-slate-700"><span class="w-1.5 h-1.5 bg-rose-400 rounded-full"></span> Free → Paid</li>
+                            <li class="flex items-center gap-2 text-slate-700"><span class="w-1.5 h-1.5 bg-rose-400 rounded-full"></span> Novos clientes (won / NMRR)</li>
+                            <li class="flex items-center gap-2 text-slate-700"><span class="w-1.5 h-1.5 bg-rose-400 rounded-full"></span> ARPA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 2: CRONOGRAMA -->
+        <section id="content-cronograma" class="hidden">
+            
+            <!-- Filtros Interativos -->
+            <div class="mb-10 sticky top-24 bg-slate-50 py-4 z-40 border-b border-slate-200">
+                <p class="text-xs font-bold text-slate-400 mb-3 uppercase tracking-wider">Filtrar por Alavanca:</p>
+                <div class="flex flex-wrap gap-2" id="filter-container">
+                    <button onclick="filterBy('all')" class="filter-btn filter-active px-4 py-1.5 rounded-full text-xs font-bold border border-slate-300 hover:border-blue-500 transition-all bg-white text-slate-600">TODAS</button>
+                    <!-- Buttons generated by JS -->
+                </div>
+            </div>
+
+            <!-- Timeline Grid -->
+            <div id="timeline-container" class="space-y-12 relative">
+                <!-- Months and Cards generated by JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Dados do Cronograma Transcritos da Imagem
+        const cronogramaData = [
+            { mes: "Abril", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição / Rentabilização", iniciativa: "Estratégia RD Free de aquisição e rentabilização", canal: "Geral", status: "Entregue", times: "DG Growth" },
+            { mes: "Maio", objetivo: "EL GERAL", alavanca: "Aquisição", iniciativa: "Diagnóstico da operação EL (MKT)", canal: "Geral", status: "Entregue", times: "DG Growth" },
+            { mes: "Maio", objetivo: "EL GERAL", alavanca: "Aquisição", iniciativa: "Revisão da proposta de valor e novo copy para o fluxo de signup", canal: "Produto", status: "Entregue", times: "DG Growth" },
+            { mes: "Maio", objetivo: "EL GERAL", alavanca: "Rentabilização", iniciativa: "Revisão da proposta de valor e novo copy para o fluxo de onboarding", canal: "Produto", status: "Entregue", times: "DG Growth" },
+            { mes: "Maio", objetivo: "EL GERAL", alavanca: "Aquisição", iniciativa: "Plano de recuperação do volume de signup em mídia paga", canal: "Mídia Paga", status: "Em Andamento", times: "DG Growth + Midia Paga" },
+            { mes: "Maio", objetivo: "EL GERAL", alavanca: "Aquisição", iniciativa: "Atualizar campanhas de mídia paga antigas", canal: "Mídia Paga", status: "Em Andamento", times: "DG Growth + Midia Paga" },
+            { mes: "Maio", objetivo: "EL GERAL", alavanca: "Aquisição", iniciativa: "Revisão do fluxo de recuperação de abandono de signup", canal: "CRO / Produto", status: "Em Andamento", times: "DG Growth" },
+            { mes: "Maio", objetivo: "LANÇAMENTO RD FREE", alavanca: "Rentabilização", iniciativa: "Início da migração dos clientes CRM Grátis para planos pagos ou para a nova versão gratuita", canal: "CRM / Produto", status: "Em Andamento", times: "DG Growth" },
+            { mes: "Junho", objetivo: "EL GERAL", alavanca: "Aquisição", iniciativa: "Diagnóstico da estratégia EL (CRM)", canal: "Geral", status: "Não Iniciado", times: "DG Growth" },
+            { mes: "Junho", objetivo: "EL GERAL", alavanca: "Aquisição", iniciativa: "Teste de campanha para oportunidades lost por preço", canal: "Compelling Vendas", status: "Não Iniciado", times: "DG Growth + Lifecycle" },
+            { mes: "Junho", objetivo: "EL GERAL", alavanca: "Aquisição", iniciativa: "Otimização da estratégia do fluxo automático de recuperação de tráfego não convertido", canal: "CRO / Produto", status: "Não Iniciado", times: "DG Growth + Lifecycle" },
+            { mes: "Junho", objetivo: "EL GERAL", alavanca: "Aquisição", iniciativa: "Otimização das páginas (site) existentes para melhorar conversão", canal: "Mídia Paga / CRO", status: "Não Iniciado", times: "DG Growth + Web" },
+            { mes: "Junho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Análise de ICP com base nos testes para usar nas campanhas de lançamento", canal: "Geral", status: "Não Iniciado", times: "DG Growth + PMM" },
+            { mes: "Junho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Planejamento do GTM com alinhamento dos times", canal: "GTM / Estratégia", status: "Não Iniciado", times: "DG Growth" },
+            { mes: "Junho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Definição das mensagens e proposta de valor", canal: "PMM", status: "Não Iniciado", times: "PMM" },
+            { mes: "Junho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Produção de conceituação de campanha de lançamento (KV)", canal: "Geral", status: "Não Iniciado", times: "DG Growth + Brand" },
+            { mes: "Junho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Plano de mídia paga + início de produção de peças para RD Free", canal: "Mídia Paga", status: "Não Iniciado", times: "DG Growth + Midia Paga" },
+            { mes: "Junho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Plano crescimento em orgânico - foco em RD Free", canal: "SEO / Orgânico", status: "Não Iniciado", times: "DG Growth + Midia Not paid" },
+            { mes: "Junho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Plano crescimento com parceiros", canal: "Parceiros", status: "Não Iniciado", times: "DG Growth + Partner" },
+            { mes: "Junho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Início da produção de conteúdo para o lançamento RD Free", canal: "Todos", status: "Não Iniciado", times: "DG Growth + PMM" },
+            { mes: "Junho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Rentabilização", iniciativa: "Novo onboarding por email", canal: "Expansão", status: "Não Iniciado", times: "DG Growth" },
+            { mes: "Junho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Rentabilização", iniciativa: "Migração dos clientes CRM Grátis para planos pagos ou para a nova versão gratuita", canal: "Produto", status: "Não Iniciado", times: "DG Growth" },
+            { mes: "Julho", objetivo: "EL GERAL", alavanca: "Aquisição / Rentabilização", iniciativa: "Definição de métricas chaves para acompanhamento do lançamento", canal: "Geral", status: "Não Iniciado", times: "DG Growth" },
+            { mes: "Julho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Produzir conteúdos comparativos (vs concorrentes)", canal: "Geral", status: "Não Iniciado", times: "DG Growth + PMM" },
+            { mes: "Julho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Alavanca via parceiros para incentivar multiproduto via RD Free", canal: "Parceiros", status: "Não Iniciado", times: "DG Growth + Partner" },
+            { mes: "Julho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Produção de conteúdo para lançamento (Foco em: SEO GEO autoridade)", canal: "SEO / GEO", status: "Não Iniciado", times: "DG Growth + Midia Not paid" },
+            { mes: "Julho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Produção de conteúdo para lançamento (Foco em: PR)", canal: "PR", status: "Não Iniciado", times: "DG Growth + PMM" },
+            { mes: "Julho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Produção do conteúdo das páginas de conversão (Sair de Trial > Virar RD Free)", canal: "Site", status: "Não Iniciado", times: "DG Growth + Web + Conteúdo" },
+            { mes: "Julho", objetivo: "EL GERAL", alavanca: "Aquisição", iniciativa: "Testes de mecânica de indicação EL via Da Match", canal: "Da match", status: "Não Iniciado", times: "DG Growth + CM" },
+            { mes: "Julho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição / Rentabilização", iniciativa: "Entrega do dash de acompanhamento MKT + CRM com visão completa (IA)", canal: "Geral", status: "Não Iniciado", times: "DG Growth" },
+            { mes: "Julho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Rentabilização", iniciativa: "[cont] Migração dos clientes CRM Grátis para planos pagos ou para a nova versão gratuita", canal: "Geral", status: "Não Iniciado", times: "DG Growth" },
+            { mes: "Julho", objetivo: "LANÇAMENTO RD FREE", alavanca: "Rentabilização", iniciativa: "Execução do plano de Rentabilização a partir do plano free de CRM", canal: "Geral", status: "Não Iniciado", times: "DG Growth" },
+            { mes: "Agosto", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Lançamento RD FREE", canal: "Geral", status: "Não Iniciado", times: "DG Growth" },
+            { mes: "Agosto", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Ativação dos loops virais", canal: "Produto / Viralidade", status: "Não Iniciado", times: "DG Growth + Produto" },
+            { mes: "Agosto", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Atualização das principais páginas de conversão (site)", canal: "Site", status: "Não Iniciado", times: "DG Growth + Web" },
+            { mes: "Agosto", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "SEO/GEO como alavanca para criar autoridade RD Station em planos gratuitos", canal: "SEO/GEO", status: "Não Iniciado", times: "DG Growth + Midia Not paid" },
+            { mes: "Agosto", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Mudança das campanhas de mídia paga com foco em RD Free", canal: "Mídia Paga", status: "Não Iniciado", times: "DG Growth + Midia Paga" },
+            { mes: "Agosto", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição", iniciativa: "Publicação de reviews (já preparadas) PR", canal: "PR / Social Proof", status: "Não Iniciado", times: "DG Growth" },
+            { mes: "Agosto", objetivo: "LANÇAMENTO RD FREE", alavanca: "Rentabilização", iniciativa: "Otimização do plano de rentabilização a partir dos planos Free", canal: "CRM / Monetização", status: "Não Iniciado", times: "DG Growth" }
+        ];
+
+        // Mudar entre Abas
+        function switchTab(tab) {
+            document.getElementById('content-estrategia').classList.toggle('hidden', tab !== 'estrategia');
+            document.getElementById('content-cronograma').classList.toggle('hidden', tab !== 'cronograma');
+            
+            document.getElementById('tab-estrategia').classList.toggle('tab-active', tab === 'estrategia');
+            document.getElementById('tab-estrategia').classList.toggle('text-slate-500', tab !== 'estrategia');
+            
+            document.getElementById('tab-cronograma').classList.toggle('tab-active', tab === 'cronograma');
+            document.getElementById('tab-cronograma').classList.toggle('text-slate-500', tab !== 'cronograma');
+
+            if(tab === 'cronograma') renderCronograma('all');
+        }
+
+        // Extrair alavancas únicas para os filtros
+        function setupFilters() {
+            const alavancas = [...new Set(cronogramaData.map(item => item.alavanca))];
+            const container = document.getElementById('filter-container');
+            
+            alavancas.forEach(alavanca => {
+                const btn = document.createElement('button');
+                btn.className = "filter-btn px-4 py-1.5 rounded-full text-xs font-bold border border-slate-300 hover:border-blue-500 transition-all bg-white text-slate-600";
+                btn.textContent = alavanca.toUpperCase();
+                btn.onclick = () => filterBy(alavanca, btn);
+                container.appendChild(btn);
+            });
+        }
+
+        // Filtrar cards
+        function filterBy(alavanca, btnElement) {
+            // Update buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('filter-active'));
+            if(btnElement) btnElement.classList.add('filter-active');
+            else document.querySelector('.filter-btn').classList.add('filter-active');
+
+            renderCronograma(alavanca);
+        }
+
+        // Renderizar o Cronograma
+        function renderCronograma(filter) {
+            const container = document.getElementById('timeline-container');
+            container.innerHTML = '';
+
+            const filteredData = filter === 'all' ? cronogramaData : cronogramaData.filter(item => item.alavanca === filter);
+            const meses = [...new Set(filteredData.map(item => item.mes))];
+
+            meses.forEach(mes => {
+                const monthSection = document.createElement('div');
+                monthSection.className = "relative pl-12";
+                
+                monthSection.innerHTML = `
+                    <div class="absolute left-0 top-0 w-10 h-10 bg-white border-2 border-blue-500 rounded-full flex items-center justify-center z-10">
+                        <span class="text-[10px] font-bold text-blue-600">${mes.substring(0,3).toUpperCase()}</span>
+                    </div>
+                    <div class="absolute left-[19px] top-10 bottom-0 w-0.5 bg-slate-200"></div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-6 uppercase tracking-tight">${mes}</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        ${filteredData.filter(item => item.mes === mes).map(item => `
+                            <div class="bg-white p-5 rounded-xl border-l-4 border-l-blue-400 border border-slate-100 shadow-sm hover:shadow-md card-transition group">
+                                <div class="flex justify-between items-start mb-3">
+                                    <span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-0.5 rounded uppercase">${item.alavanca}</span>
+                                    <span class="text-[10px] font-bold ${item.status === 'Entregue' ? 'text-emerald-500 bg-emerald-50' : item.status === 'Em Andamento' ? 'text-blue-500 bg-blue-50' : 'text-slate-400 bg-slate-50'} px-2 py-0.5 rounded uppercase">${item.status}</span>
+                                </div>
+                                <h4 class="font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">${item.iniciativa}</h4>
+                                <div class="grid grid-cols-2 gap-4 mt-4 pt-4 border-t border-slate-50">
+                                    <div>
+                                        <p class="text-[9px] font-bold text-slate-400 uppercase">Objetivo</p>
+                                        <p class="text-xs text-slate-600 font-medium">${item.objetivo}</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[9px] font-bold text-slate-400 uppercase">Canal</p>
+                                        <p class="text-xs text-slate-600 font-medium">${item.canal || '-'}</p>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <p class="text-[9px] font-bold text-slate-400 uppercase">Times</p>
+                                    <p class="text-[10px] text-slate-500 italic">${item.times}</p>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                container.appendChild(monthSection);
+            });
+        }
+
+        // Init
+        window.onload = () => {
+            setupFilters();
+            renderCronograma('all');
+        };
+    </script>
+</body>
+</html>
