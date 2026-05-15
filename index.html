@@ -20,6 +20,10 @@
             scrollbar-color: #cbd5e1 transparent;
         }
         .roadmap-container::-webkit-scrollbar { height: 4px; }
+        
+        .metric-card { border: 1px solid #e2e8f0; border-top: 4px solid #3b82f6; }
+        .status-danger { color: #ef4444; }
+        .status-success { color: #10b981; }
     </style>
 </head>
 <body class="min-h-screen pb-10">
@@ -34,6 +38,7 @@
             
             <nav class="flex gap-8">
                 <button onclick="switchTab('estrategia')" id="tab-estrategia" class="pb-2 px-1 text-sm font-medium transition-all tab-active">ESTRATÉGIA</button>
+                <button onclick="switchTab('diagnostico')" id="tab-diagnostico" class="pb-2 px-1 text-sm font-medium transition-all text-slate-500 hover:text-blue-500">DIAGNÓSTICO</button>
                 <button onclick="switchTab('cronograma')" id="tab-cronograma" class="pb-2 px-1 text-sm font-medium transition-all text-slate-500 hover:text-blue-500">CRONOGRAMA & GTM</button>
             </nav>
         </div>
@@ -41,7 +46,7 @@
 
     <main class="max-w-6xl mx-auto px-6 mt-10">
 
-        <!-- ABA 1: ESTRATÉGIA (RESTAURADA) -->
+        <!-- ABA 1: ESTRATÉGIA -->
         <section id="content-estrategia" class="space-y-12">
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
                 <p class="text-lg text-slate-600 leading-relaxed max-w-4xl">
@@ -50,7 +55,7 @@
             </div>
 
             <div>
-                <h2 class="text-xl font-bold mb-6 flex items-center gap-2">PILARES ESTRATÉGICOS</h2>
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-2 text-slate-800 uppercase tracking-tight">Pilares Estratégicos</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
                         <div class="bg-blue-500 text-white w-10 h-10 rounded-lg flex items-center justify-center mb-4">
@@ -82,41 +87,245 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div>
-                <h2 class="text-xl font-bold mb-6 flex items-center gap-2">PRINCIPAIS MÉTRICAS</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-xl border border-slate-200">
-                        <h3 class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-wider">Aquisição</h3>
-                        <ul class="space-y-3 text-sm text-slate-700">
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span> CVR visita → signup</li>
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span> Aumento % de signups</li>
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span> % de canais não pagos</li>
-                        </ul>
+        <!-- ABA 2: DIAGNÓSTICO -->
+        <section id="content-diagnostico" class="hidden space-y-10">
+            <!-- Header do Diagnóstico -->
+            <div class="text-center md:text-left">
+                <h2 class="text-2xl font-bold text-slate-800">Diagnóstico da Aquisição EL</h2>
+                <p class="text-sm font-semibold text-slate-500 mt-1 uppercase tracking-widest">YTD: Janeiro – Abril 2026</p>
+            </div>
+
+            <!-- Narrativa -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-5 rounded-xl shadow-sm border-l-4 border-blue-500">
+                    <h3 class="font-bold text-slate-800 uppercase text-[10px] tracking-wider mb-2">Diagnóstico</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Mapeamento de gargalos, oportunidades e pontos de melhoria em toda a jornada de aquisição EL.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border-l-4 border-slate-400">
+                    <h3 class="font-bold text-slate-800 uppercase text-[10px] tracking-wider mb-2">Ação</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Fundação estratégica para estruturar ações de otimização antes do lançamento do RD Free.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border-l-4 border-emerald-500">
+                    <h3 class="font-bold text-slate-800 uppercase text-[10px] tracking-wider mb-2">Impacto</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Otimizar a aquisição atual e preparar o terreno para a conversão no futuro plano RD Free.</p>
+                </div>
+            </div>
+
+            <!-- Resumo Comparativo YTD -->
+            <div class="bg-slate-800 p-6 rounded-2xl text-white shadow-lg">
+                <h3 class="text-[10px] font-bold text-slate-400 mb-4 uppercase tracking-widest">Performance YTD 26 (Jan-Abr) vs 2025</h3>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <div class="border-r border-slate-700 last:border-0 pr-4">
+                        <p class="text-[9px] text-slate-400 font-bold uppercase mb-1">Signups</p>
+                        <p class="text-xl font-bold">33.585 <span class="text-xs text-rose-400 block font-normal">vs 60.486 (2025)</span></p>
+                        <p class="text-rose-400 text-xs font-bold">Atingimento: 64%</p>
                     </div>
-                    <div class="bg-white p-6 rounded-xl border border-slate-200">
-                        <h3 class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-wider">Engajamento</h3>
-                        <ul class="space-y-3 text-sm text-slate-700">
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span> % ativação inicial</li>
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span> % finalização de onboarding</li>
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span> Uso de funcionalidades</li>
-                        </ul>
+                    <div class="border-r border-slate-700 last:border-0 pr-4">
+                        <p class="text-[9px] text-slate-400 font-bold uppercase mb-1">Won</p>
+                        <p class="text-xl font-bold">2.421 <span class="text-xs text-rose-400 block font-normal">vs 3.656 (2025)</span></p>
+                        <p class="text-rose-400 text-xs font-bold">Atingimento: 68%</p>
                     </div>
-                    <div class="bg-white p-6 rounded-xl border border-slate-200">
-                        <h3 class="text-xs font-bold text-slate-400 mb-4 uppercase tracking-wider">Rentabilização</h3>
-                        <ul class="space-y-3 text-sm text-slate-700">
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-rose-400 rounded-full"></span> Free → Paid</li>
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-rose-400 rounded-full"></span> Novos clientes (won / NMRR)</li>
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-rose-400 rounded-full"></span> ARPA</li>
-                        </ul>
+                    <div class="border-r border-slate-700 last:border-0 pr-4">
+                        <p class="text-[9px] text-slate-400 font-bold uppercase mb-1">Signup to Paid</p>
+                        <p class="text-xl font-bold">7,2% <span class="text-xs text-emerald-400 block font-normal">vs 6,0% (2025)</span></p>
+                        <p class="text-emerald-400 text-xs font-bold">Atingimento: 107%</p>
+                    </div>
+                    <div class="border-r border-slate-700 last:border-0 pr-4">
+                        <p class="text-[9px] text-slate-400 font-bold uppercase mb-1">NMRR</p>
+                        <p class="text-xl font-bold">R$ 350.629 <span class="text-xs text-rose-400 block font-normal">vs R$ 445k (2025)</span></p>
+                        <p class="text-rose-400 text-xs font-bold">Atingimento: 83%</p>
+                    </div>
+                    <div>
+                        <p class="text-[9px] text-slate-400 font-bold uppercase mb-1">ARPA</p>
+                        <p class="text-xl font-bold">R$ 145 <span class="text-xs text-emerald-400 block font-normal">vs R$ 122 (2025)</span></p>
+                        <p class="text-emerald-400 text-xs font-bold">Atingimento: 121%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evolução Mensal 2026 -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                <h3 class="text-sm font-bold text-slate-800 mb-6 uppercase tracking-tight">Evolução Mensal 2026 (Jan-Abr)</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs">
+                        <thead>
+                            <tr class="text-slate-400 border-b border-slate-100">
+                                <th class="pb-3 font-bold uppercase">Mês</th>
+                                <th class="pb-3 font-bold uppercase">Signup</th>
+                                <th class="pb-3 font-bold uppercase">S2P (Conversão)</th>
+                                <th class="pb-3 font-bold uppercase">Won</th>
+                                <th class="pb-3 font-bold uppercase">NMRR</th>
+                                <th class="pb-3 font-bold uppercase">% Meta NMRR</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-700">
+                            <tr class="border-b border-slate-50">
+                                <td class="py-3 font-bold">JAN</td>
+                                <td class="py-3">13.630</td>
+                                <td class="py-3">4,4%</td>
+                                <td class="py-3 text-blue-600 font-bold">605</td>
+                                <td class="py-3">R$ 81.496</td>
+                                <td class="py-3">75%</td>
+                            </tr>
+                            <tr class="border-b border-slate-50">
+                                <td class="py-3 font-bold">FEV</td>
+                                <td class="py-3">7.335</td>
+                                <td class="py-3">8,2%</td>
+                                <td class="py-3 text-blue-600 font-bold">605</td>
+                                <td class="py-3">R$ 95.623</td>
+                                <td class="py-3">98%</td>
+                            </tr>
+                            <tr class="border-b border-slate-50">
+                                <td class="py-3 font-bold">MAR</td>
+                                <td class="py-3">7.289</td>
+                                <td class="py-3">8,8%</td>
+                                <td class="py-3 text-blue-600 font-bold">644</td>
+                                <td class="py-3">R$ 88.363</td>
+                                <td class="py-3">77%</td>
+                            </tr>
+                            <tr class="border-b border-slate-50">
+                                <td class="py-3 font-bold">ABR</td>
+                                <td class="py-3">5.331</td>
+                                <td class="py-3">10,6%</td>
+                                <td class="py-3 text-blue-600 font-bold">567</td>
+                                <td class="py-3">R$ 85.147</td>
+                                <td class="py-3">82%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Comentário sobre Eficiência -->
+                <div class="mt-6 p-4 bg-blue-50 border border-blue-100 rounded-xl">
+                    <p class="text-xs text-blue-800 leading-relaxed italic">
+                        "Conseguimos manter o NMRR de forma linear durante os meses de 2026 mesmo com uma queda muito forte de volume em signup, o que mostra ganho de eficiência. <strong>Mas agora estamos no limite: sem recuperar topo de funil, não temos fôlego para bater metas de NMRR.</strong>"
+                    </p>
+                </div>
+            </div>
+
+            <!-- Canais e Performance -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Canais de Aquisição Texto -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-800 mb-4 border-b pb-2 uppercase tracking-tight">Canais de Aquisição</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-bold text-slate-600">Paid Media</span>
+                            <span class="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded font-bold">58% do volume</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Identificamos alta dependência de Paid Media. A otimização para leads mais qualificados elevou a qualidade do lead e melhorou as taxas de conversão do canal, mas impactou negativamente o volume total.
+                        </p>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <p class="text-[10px] font-bold text-slate-800 uppercase mb-2">Estratégia</p>
+                            <p class="text-xs text-slate-700 leading-relaxed">
+                                O foco passa a ser o reequilíbrio do mix, combinando recuperação de volume em paid com expansão de canais mais eficientes para sustentação do crescimento.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gráfico de Canais (Visualização por Canal) -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-800 mb-4 border-b pb-2 uppercase tracking-tight">Performance Breakdown por Canal (YTD 2026)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-[10px] text-left">
+                            <thead>
+                                <tr class="text-slate-400 border-b border-slate-50">
+                                    <th class="pb-2">Canal</th>
+                                    <th class="pb-2">Signup</th>
+                                    <th class="pb-2">S2P (%)</th>
+                                    <th class="pb-2">Won</th>
+                                    <th class="pb-2">NMRR</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-700">
+                                <tr class="border-b border-slate-50">
+                                    <td class="py-2 font-semibold">Paid Media</td>
+                                    <td class="py-2">19.509</td>
+                                    <td class="py-2">3,2%</td>
+                                    <td class="py-2">617</td>
+                                    <td class="py-2">R$ 70.950</td>
+                                </tr>
+                                <tr class="border-b border-slate-50">
+                                    <td class="py-2 font-semibold">Link Ref.</td>
+                                    <td class="py-2">7.200</td>
+                                    <td class="py-2 font-bold text-emerald-600">9,6%</td>
+                                    <td class="py-2">692</td>
+                                    <td class="py-2">R$ 93.777</td>
+                                </tr>
+                                <tr class="border-b border-slate-50">
+                                    <td class="py-2 font-semibold">Direct</td>
+                                    <td class="py-2">4.264</td>
+                                    <td class="py-2 font-bold text-emerald-600">13,2%</td>
+                                    <td class="py-2">561</td>
+                                    <td class="py-2">R$ 82.574</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-semibold">Organic</td>
+                                    <td class="py-2">1.813</td>
+                                    <td class="py-2">8,4%</td>
+                                    <td class="py-2">152</td>
+                                    <td class="py-2">R$ 18.830</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fricções e Onboarding -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Fricções no Fluxo de Signup -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-800 mb-4 border-b pb-2 uppercase tracking-tight">Fricções no Fluxo de Signup</h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-3">
+                            <div class="bg-rose-100 text-rose-600 w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-[10px] font-bold">!</div>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                <span class="font-bold text-slate-800">Abandono Crítico:</span> ~82% dos usuários que visitam a primeira página do signup abandonam o fluxo.
+                            </p>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="bg-rose-100 text-rose-600 w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-[10px] font-bold">!</div>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                <span class="font-bold text-slate-800">Comunicação fraca:</span> Não temos uma boa comunicação nas páginas de signup. Estamos somente com um formulário frio.
+                            </p>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="bg-rose-100 text-rose-600 w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-[10px] font-bold">!</div>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                <span class="font-bold text-slate-800">Fricção Técnica:</span> A introdução da validação de e-mail contribuiu para queda de signup a partir do mês de fevereiro.
+                            </p>
+                        </div>
+                        <div class="mt-4 p-3 bg-emerald-50 border border-emerald-100 rounded-lg">
+                            <p class="text-[10px] font-bold text-emerald-800 uppercase mb-1">Oportunidade</p>
+                            <p class="text-xs text-emerald-700">Melhorar fluxo de signup para diminuir abandono e aumentar conversão em leads qualificados.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lacuna no Onboarding -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-800 mb-4 border-b pb-2 uppercase tracking-tight">Lacuna de Ativação (Onboarding)</h3>
+                    <div class="space-y-4">
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            O produto conduz o usuário por etapas de personalização e primeiros passos, mas não oferece orientação guiada após a entrada.
+                        </p>
+                        <div class="bg-amber-50 p-4 rounded-xl border border-amber-100">
+                            <h4 class="text-[10px] font-bold text-amber-800 uppercase mb-2">Ponto Crítico</h4>
+                            <p class="text-xs text-amber-800 leading-relaxed italic">
+                                A ausência de um onboarding guiado gera uma lacuna na ativação. O usuário precisa recorrer a conteúdos externos para entender como utilizar as funcionalidades essenciais.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ABA 2: CRONOGRAMA (COMPACTO COM COPY ORIGINAL) -->
+        <!-- ABA 3: CRONOGRAMA -->
         <section id="content-cronograma" class="hidden">
-            
             <!-- Roadmap Linear -->
             <div class="mb-8 bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
                 <div class="roadmap-container flex items-start gap-0 relative">
@@ -158,7 +367,6 @@
     </main>
 
     <script>
-        // Copy Original Restaurado
         const cronogramaData = [
             { mes: "Abril", objetivo: "LANÇAMENTO RD FREE", alavanca: "Aquisição / Rentabilização", iniciativa: "Estratégia RD Free de aquisição e rentabilização", canal: "Geral", status: "Entregue", times: "DG Growth" },
             { mes: "Maio", objetivo: "EL GERAL", alavanca: "Aquisição", iniciativa: "Diagnóstico da operação EL (MKT)", canal: "Geral", status: "Entregue", times: "DG Growth" },
@@ -203,9 +411,13 @@
 
         function switchTab(tab) {
             document.getElementById('content-estrategia').classList.toggle('hidden', tab !== 'estrategia');
+            document.getElementById('content-diagnostico').classList.toggle('hidden', tab !== 'diagnostico');
             document.getElementById('content-cronograma').classList.toggle('hidden', tab !== 'cronograma');
+            
             document.getElementById('tab-estrategia').classList.toggle('tab-active', tab === 'estrategia');
+            document.getElementById('tab-diagnostico').classList.toggle('tab-active', tab === 'diagnostico');
             document.getElementById('tab-cronograma').classList.toggle('tab-active', tab === 'cronograma');
+            
             if(tab === 'cronograma') renderCronograma('all');
         }
 
